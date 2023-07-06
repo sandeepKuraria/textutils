@@ -122,7 +122,7 @@ export default function About(props) {
               reach out to us. We appreciate your support and are here to assist
               you in any way we can.
             </p>
-            <Link to="/" className="btn btn-primary">
+            <Link to="/home" className="btn btn-primary">
               Go to Home
             </Link>
           </div>
