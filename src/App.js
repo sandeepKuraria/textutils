@@ -34,6 +34,7 @@ function App() {
 
   const showColor = () => {
     document.body.style.backgroundColor = "#d39e00";
+
     showAlert("success", "Yellow background is Enabled");
   };
 
@@ -54,12 +55,13 @@ function App() {
         <Routes>
           <Route
             exact
-            path="/"
+            path="/textutils"
             element={
               <div className="container my-3">
                 <TextForm
+                  showColor={showColor}
                   showAlert={showAlert}
-                  heading="Enter the text to analyse below"
+                  heading="Try TextUtils - Word counter, Character counter, Remove extra spaces"
                   mode={mode}
                 />
               </div>
@@ -72,11 +74,28 @@ function App() {
             path="/about"
             element={
               <About
+                showColor={showColor}
                 heading="About us"
                 title="TextUtils"
                 showAlert={showAlert}
                 mode={mode}
               />
+            }
+          />
+        </Routes>
+        <Routes>
+          <Route
+            exact
+            path="/home"
+            element={
+              <div className="container my-3">
+                <TextForm
+                  showColor={showColor}
+                  showAlert={showAlert}
+                  heading="Try TextUtils - Word counter, Character counter, Remove extra spaces"
+                  mode={mode}
+                />
+              </div>
             }
           />
         </Routes>

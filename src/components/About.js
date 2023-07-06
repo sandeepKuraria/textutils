@@ -42,8 +42,37 @@ export default function About(props) {
           {props.heading}
         </h1>
         <div className="card" style={{ width: "70rem" }}>
-          <div className="container" style={{ width: "18rem" }}>
-            <img src={Tu} alt="" style={{ width: "18rem" }} />
+          {/* <div
+            className="container"
+            style={{
+              width: "18rem",
+            }}
+          >
+          <img
+            src={Tu}
+            alt=""
+            style={{
+              width: "18rem",
+            }}
+          />
+          </div> */}
+
+          <div style={{ display: "flex" }}>
+            <div>
+              <img
+                src={Tu}
+                alt=""
+                style={{
+                  width: "18rem",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                backgroundColor: props.mode === "light" ? "white" : "#040e18",
+                flex: 1,
+              }}
+            ></div>
           </div>
 
           <div

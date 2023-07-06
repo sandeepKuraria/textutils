@@ -64,7 +64,7 @@ export default function TextForm(props) {
             color: props.mode === "light" ? "#040e18" : "white",
           }}
         >
-          <h1>{props.heading}</h1>
+          <h2>{props.heading}</h2>
         </label>
         <textarea
           className="form-control"
@@ -118,9 +118,20 @@ export default function TextForm(props) {
       >
         <h1>Your text summary</h1>
         <p>
-          {text.split(" ").length - 1} words and {text.length} characters
+          {
+            text.split(/\s+/).filter((element) => {
+              return element.length !== 0;
+            }).length
+          }
+          words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").length} minutes read</p>
+        <p>
+          {0.008 *
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length}
+          minutes read
+        </p>
         <h2>Preview</h2>
         <p>
           {text.length > 0
